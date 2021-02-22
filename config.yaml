@@ -1,0 +1,16 @@
+---
+# This YAML configuration specifies a server with two volumes and two users
+server:
+  instance_type: t2.micro
+  min_count: 1
+  max_count: 1
+  volumes:
+    - device: /dev/xvda
+      size_gb: 10
+      mount: /
+    - device: /dev/xvdf
+      size_gb: 20
+      mount: /data
+  users:
+    - login: user1
+    - login: user2
